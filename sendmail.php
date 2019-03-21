@@ -14,7 +14,7 @@
     $mail->Port = 587;
     $mail->isHTML(true);
     $mail->Username ='akashmenon11699cool@gmail.com';  //senders mail
-    $mail->Password ='cricket11699soup'; //mail password
+    $mail->Password =''; //mail password
     $mail->setFrom('akashmenon11699cool@gmail.com','BrokFree.com');  //alternate name
     $mail->Subject ='BrokFree Account Confirmation';
     ob_start();
