@@ -2,8 +2,8 @@
     session_start();
     if(isset($_COOKIE['ksi'])):
         setcookie('ksi',$str,time(),'','',0,1);
-        require "../classes/DBase.php";
-        require "../classes/stmt.php";
+        require "classes/DBase.php";
+        require "classes/stmt.php";
         $email=$_SESSION['email'];
         $conn = new DBase("brokfree");
         $pdo=$conn->pdo;

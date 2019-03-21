@@ -7,8 +7,8 @@
     $error=false;
     if (isset($_POST['email'])):
         include "error.php";
-        include "../classes/DBase.php";
-        include "../classes/stmt.php";
+        include "classes/DBase.php";
+        include "classes/stmt.php";
         $email=$_POST['email'];
         $password=$_POST['password'];
         $conn = new DBase("brokfree");

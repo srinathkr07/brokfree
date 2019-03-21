@@ -5,8 +5,8 @@
     endif;
     if(isset($_POST['email'])):
         //include "error.php";
-        include "../classes/DBase.php";
-        include "../classes/stmt.php";
+        include "classes/DBase.php";
+        include "classes/stmt.php";
         $conn = new DBase("brokfree");
         $pdo=$conn->pdo;
         $email= $_POST['email'];

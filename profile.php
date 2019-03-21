@@ -1,6 +1,6 @@
 <?php
-    include "../classes/DBase.php";
-    include "../classes/stmt.php";
+    include "classes/DBase.php";
+    include "classes/stmt.php";
     include "error.php";
     session_start();
     if(isset($_SESSION['email'])):

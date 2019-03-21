@@ -5,8 +5,8 @@
         exit();
     else:
         $hash=$_GET['hash'];
-        include "../classes/stmt.php";
-        include "../classes/DBase.php";
+        include "classes/stmt.php";
+        include "classes/DBase.php";
 
         $conn = new DBase("brokfree");
         $pdo=$conn->pdo;

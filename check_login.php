@@ -1,6 +1,6 @@
 <?php
-    include "../classes/DBase.php";
-    include "../classes/stmt.php";
+    include "classes/DBase.php";
+    include "classes/stmt.php";
     session_start();
     function check(){
         $val = (isset($_COOKIE['ksi'])) ? true : false ;

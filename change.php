@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include "../classes/DBase.php";
-    include "../classes/stmt.php";
+    include "classes/DBase.php";
+    include "classes/stmt.php";
     if(isset($_SESSION['email'])):
         $error=false;
         if(isset($_POST['password'])):
