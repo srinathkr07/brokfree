@@ -281,7 +281,7 @@ body {
                     <?php else:
                         foreach($s1 as $row):
                     ?>
-                    <a href={{i.link}} id="something">
+                    <a href="viewhome.php?id=<?=$row['id_house']?>" id="something">
                     <div class="home-card">
                         <div class="row" style="background-color: lightgrey; padding:5px;">
                             <p class="house-name">Name of the House :<?=$row['name']?></p>
