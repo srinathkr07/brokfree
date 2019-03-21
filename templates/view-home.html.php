@@ -92,13 +92,13 @@ body {
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    {% if user.is_authenticated %}
-                        <li><a href="/profile/"><span class="" style="font-weight: bold;">{{user}}</span></a></li>
-                        <li><a href="/logout/"><span class="">Logout</span></a></li>
-                        {% else %}
-                        <li><a href="/signup/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    {% endif %}
+                <?php if($val):?>
+                        <li><a href="profile.php"><span class="" style="font-weight: bold;"><?=$username?></span></a></li>
+                        <li><a href="logout.php"><span class="">Logout</span></a></li>
+                <?php else: ?>
+                        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php endif;?>
                 </ul>
             </div>
         </div>
@@ -397,7 +397,7 @@ body {
     <script>
         var c = function (pos) {
                 var lat =<?=$row['lat']?>,
-                long = <?=$row['long']?>,
+                long = <?=$row['lon']?>,
                 coords = lat + ', ' + long;
             document.getElementById('google_map').setAttribute('src', 'https://maps.google.co.in/?q=' + coords + '&z=60&output=embed');
         }
