@@ -88,7 +88,7 @@ body {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="hompage.php">BrokFree</a>
+                <a class="navbar-brand" href="homepage.php">BrokFree</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
