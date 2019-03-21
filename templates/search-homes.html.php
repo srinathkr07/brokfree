@@ -17,6 +17,7 @@
 body {
     opacity:0;
     transition: opacity 1s ease;
+	background: linear-gradient(to right, #2600D9, #F2000D);
 }
 
 .loaded {
@@ -144,7 +145,7 @@ body {
 }
 
 </style>
-<body style="background-color:rgb(238, 114, 13)" onload="document.body.classList.add('loaded')">
+<body onload="document.body.classList.add('loaded')">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -153,17 +154,17 @@ body {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/home/">BrokFree</a>
+                <a class="navbar-brand" href="homepage.php">BrokFree</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                     {% if user.is_authenticated %}
-                        <li><a href="/profile/"><span class="" style="font-weight: bold;">{{user}}</span></a></li>
-                        <li><a href="/logout/"><span class="">Logout</span></a></li>
-                        {% else %}
-                        <li><a href="/signup/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    {% endif %}
+                <?php if($val):?>
+                        <li><a href="profile.php"><span class="" style="font-weight: bold;"><?=$username?></span></a></li>
+                        <li><a href="logout.php"><span class="">Logout</span></a></li>
+                <?php else: ?>
+                        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php endif;?>
                 </ul>
             </div>
         </div>
@@ -273,53 +274,56 @@ body {
             </div>
             <div class="col-md-8">
                 <div class="page-cards">
-                    {% if empty %}
+                    <?php if($s1->rowCount()==0):?>
                     <div class="home-card" style="text-align: center;">
                         <h1 style="font-weight: bold; font-family: sans serif;">There are no houses matching your requirements</h1>
                     </div>
-                    {% else %}
-                    {% for i in list %}
+                    <?php else:
+                        foreach($s1 as $row):
+                    ?>
                     <a href={{i.link}} id="something">
                     <div class="home-card">
                         <div class="row" style="background-color: lightgrey; padding:5px;">
-                            <p class="house-name">Name of the House : {{i.name}}</p>
+                            <p class="house-name">Name of the House :<?=$row['name']?></p>
                         </div>
                         <div class="row">
                             <div class="col-md-4" id="house-detail">
                                 <p>Builtup</p>
-                                <p>{{i.builtup}}</p>
+                                <p><?=$row['builtup']?></p>
                             </div>
                             <div class="col-md-4" id="house-detail">
                                 <p>Deposit</p>
-                                <p>{{i.deposit}}</p>
+                                <p><?=$row['deposit']?></p>
                             </div>
                             <div class="col-md-4" id="house-detail">
                                 <p>Rent</p>
-                                <p>{{i.rent}}</p>
+                                <p><?=$row['rent']?></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6" style="color:black">
                                 <i class="fa fa-couch" style="font-size:30px"></i>
-                                <p>FURNISHING : {{i.furnishing}}</p>
+                                <p>FURNISHING : <?=$row['furnishing']?></p>
                             </div>
                             <div class="col-md-6" style="color:black">
                                 <i class="fa fa-birthday-cake" aria-hidden="true" style="font-size:30px"></i>
-                                <p>AGE OF THE BUILDING : {{i.age}}</p>
+                                <p>AGE OF THE BUILDING : <?=$row['age']?></p>
                             </div>
                             <div class="col-md-6" style="color:black">
                                 <i class="fa fa-user" aria-hidden="true" style="font-size:30px"></i>
-                                <p>PREFERRED TENANTS : {{i.pt}}</p>
+                                <p>PREFERRED TENANTS : <?=$row['pt']?></p>
                             </div>
                             <div class="col-md-6" style="color:black">
                                 <i class="fa fa-key" aria-hidden="true" style="font-size:30px"></i>
-                                <p>AVAILABILITY : {{i.avail}}</p>
+                                <p>AVAILABILITY : <?=$row['availability']?></p>
                             </div>
                         </div>
                     </div>
                     </a>
-                    {% endfor %}
-                    {% endif %}
+                    <?php
+                        endforeach;
+                        endif;
+                    ?>
                 </div>
             </div>
         </div>

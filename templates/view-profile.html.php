@@ -86,32 +86,24 @@ padding:30px;
         </div>
         <div class="contents">
             <div class="row">
-                <label class="col-4 col-form-label">First Name    : </label>
-                <p class="col-8" id="fname">{{first_name}}</p>
-            </div>
-            <div class="row">
-                <label class="col-4 col-form-label">Last Name     : </label>
-                <p class="col-8" id="lname">{{last_name}}</p>
+                <label class="col-4 col-form-label">Name          : </label>
+                <p class="col-8" id="fname"><?=$name?></p>
             </div>
             <div class="row">
                 <label class="col-4 col-form-label">Email         : </label>
-                <p class="col-8" id="mail">{{email}}</p>
-            </div>
-            <div class="row">
-                <label class="col-4 col-form-label">Date Joined   : </label>
-                <p class="col-8" id="date">{{date}}</p>
+                <p class="col-8" id="mail"><?=$email?></p>
             </div>
             <div class="row">
                 <label class="col-4 col-form-label">Mobile Number : </label>
-                <p class="col-8" id="mobile">{{mobile}}</p>
+                <p class="col-8" id="mobile"><?=$mobile?></p>
             </div>
             <div class="row">
                 <label class="col-4 col-form-label">Username      : </label>
-                <p class="col-8" id="username">{{username}}</p>
+                <p class="col-8" id="username"><?=$username?></p>
             </div>
-            <a href="#">Change password?</a>
+            <a href="change.php">Change password?</a>
             <div class="go-to-home">
-                <a href="/home/">
+                <a href="homepage.php">
                     <button class="btn btn-danger" style="border-radius: 20px;">Go back to Homepage</button>
                 </a>
             </div> 

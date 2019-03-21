@@ -3,6 +3,7 @@
     <title>Signup for Brokfree</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <style>
     *, *:before, *:after {
@@ -17,10 +18,10 @@
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
 }
 body {
-  background: #2f3ec9;
   font-family: 'Titillium Web', sans-serif;
   opacity:0;
   transition: opacity 1s ease;
+  background: #2f3ec9;
 }
 .loaded {
     opacity:1;
@@ -127,62 +128,65 @@ textarea {
   display: block;
   width: 100%;
 }
+#particles-js{
+ 
+}
 </style>
 <body onload="document.body.classList.add('loaded')">
-    <div class="container">
-            <div class="form">
-                <div class="tab-content">
-                <form action="../signup.php" method="post">
-                    <h1>Signup</h1>
-                    <div class="top-row">
-                        <div class="field-wrap">
-                            <label>
-                                Username<span class="req">*</span>
-                            </label>
-                            <input type="text" required autocomplete="off" name="username">
-                        </div>
-
-                        <div class="field-wrap">
-                            <label>
-                              Name<span class="req">*</span>
-                            </label>
-                            <input type="text" required autocomplete="off" name="name">
-                        </div>
-                    </div>
-                
-                    <div class="field-wrap">
-                        <label>
-                            Mobile Number<span class="req">*</span>
-                        </label>
-                        <input type="text" required autocomplete="off" name="mobile">
-                    </div>
-                
-                    <div class="field-wrap">
-                        <label>
-                            Email<span class="req">*</span>
-                        </label>
-                        <input type="email" required autocomplete="off" name="email">
-                    </div>
-                
-                    <div class="field-wrap">
-                        <label>
-                            Set A Password<span class="req">*</span>
-                        </label>
-                        <input type="password" required autocomplete="off" name="password1">
-                    </div>
-
-                    <div class="field-wrap">
-                        <label>
-                            Re-enter Password<span class="req">*</span>
-                        </label>
-                        <input type="password" required autocomplete="off" name="password2">
-                    </div>
-                    <button type="submit" class="button button-block">Get Started</button>
-                </form>
-                </div>
-            </div>
+  <div id="particles-js">
+  <div class="form">
+    <div class="tab-content">
+      <form action="../brokfree/signup.php" method="post">
+        <h1>Signup</h1>
+        <div class="top-row">
+        <div class="field-wrap">
+          <label>
+            Username<span class="req">*</span>
+          </label>
+          <input type="text" required autocomplete="off" name="username">
+        </div>
+        <div class="field-wrap">
+          <label>
+            Name<span class="req">*</span>
+          </label>
+          <input type="text" required autocomplete="off" name="name">
+        </div>
+        </div>
+        <div class="field-wrap">
+          <label>
+            Mobile Number<span class="req">*</span>
+          </label>
+          <input type="text" required autocomplete="off" name="mobile">
+        </div>
+        <div class="field-wrap">
+          <label>
+            Email<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" name="email">
+        </div>
+        <div class="field-wrap">
+          <label>
+            Set A Password<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" name="password1">
+        </div>
+        <div class="field-wrap">
+          <label>
+            Re-enter Password<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" name="password2">
+        </div>
+        <button type="submit" class="button button-block">Get Started</button>
+      </form>
     </div>
-    <script>
+  </div>
+  </div>
+  <script>
+      particlesJS.load('particles-js','templates/JS/particles.json',function(){
+        console.log('json loaded');
+      });
+  </script>
+  <script>
     $(function () {
 
         $('.form').find('input, textarea').on('keyup blur focus', function (e) {

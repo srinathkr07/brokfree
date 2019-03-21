@@ -100,18 +100,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/home/">BrokFree</a>
+                <a class="navbar-brand" href="homepage.php">BrokFree</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#aboutUs">About Us</a></li>
-                        {% if user.is_authenticated %}
-                        <li><a href="/profile/"><span class="" style="font-weight: bold;">{{user}}</span></a></li>
-                        <li><a href="/logout/"><span class="">Logout</span></a></li>
-                        {% else %}
-                        <li><a href="/signup/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        {% endif %}
+                    <?php if($val):?>
+                        <li><a href="profile.php"><span class="" style="font-weight: bold;"><?=$username?></span></a></li>
+                        <li><a href="logout.php"><span class="">Logout</span></a></li>
+                    <?php else: ?>
+                        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <?php endif;?>
                 </ul>
             </div>
         </div>
@@ -122,7 +122,7 @@
                 without the intervention of Broker.</p>
         </div>
         <div style='height:100px; overflow:hidden; text-align: center;'>
-            <form class="navbar-form" role="search" action="/search/" method="GET">
+            <form class="navbar-form"  action="search.php" method="GET">
                 <div class="input-group" style='width:500px'>
                     <input type="text" placeholder="Search for a locality" style='height:34px; width:400px;' list='cities' autocomplete="off" name='city' required>
                     <datalist id='cities'>
@@ -155,7 +155,6 @@
         </div>
         <div class='post-ads-button'>
             <form action="/post/" method='POST'>
-                {% csrf_token %}
                 <button type='submit' class="btn btn-danger" style="font-size: 24px; box-shadow: 0 4px 10px 4px rgba(8, 25, 37, 0.3);">Post
                     Ads Now</button>
             </form>
@@ -230,7 +229,7 @@
     </div>
     <footer class="page-footer font-large blue pt-4">
         <div class="footer-copyright text-right py-3">
-            <span style="background-color: rgb(231, 231, 231);">© 2018 Copyright: Sai and Akash</span>
+            <span style="background-color: rgb(231, 231, 231);">© 2018 Copyright:BrokFree 18-19</span>
         </div>
     </footer>
     <script>

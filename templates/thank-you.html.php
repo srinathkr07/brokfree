@@ -18,7 +18,7 @@
                 <p style="font-size:25px;">
                     <span style="color:white;">Having trouble? </span><a href="">Contact us</a>
                 </p>
-                <a href="/home/" style="text-decoration: none;">
+                <a href="homepage.php" style="text-decoration: none;">
                 <button class="btn btn-warning btn-lg" style="border-radius: 30px;">Continue to Homepage</button>
                 </a>
             </div>
