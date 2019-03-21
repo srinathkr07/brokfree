@@ -10,4 +10,3 @@ Users are also given the ability to further filter homes based on a vareity of f
 
 `sudo systemctl start apache2`
 
-Clone this link [https://github.com/menon99/brokfree.git](https://github.com/menon99/brokfree.git) 
