@@ -13,9 +13,9 @@
     $mail->Host ='smtp.gmail.com';
     $mail->Port = 587;
     $mail->isHTML(true);
-    $mail->Username ='akashmenon11699cool@gmail.com';  //senders mail
+    $mail->Username ='';  //senders mail
     $mail->Password =''; //mail password
-    $mail->setFrom('akashmenon11699cool@gmail.com','BrokFree.com');  //alternate name
+    $mail->setFrom('','BrokFree.com');  //alternate name
     $mail->Subject ='BrokFree Account Confirmation';
     ob_start();
     include "../brokfree/templates/confirmemail.html.php";
