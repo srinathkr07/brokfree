@@ -1,12 +1,11 @@
 <?php
     if(isset($_GET['id'])):
-        include "classes/DBase.php";
-        include "classes/stmt.php";
         include "check_login.php";
+        include "error.php";
         $val=check();
+        $conn = new DBase("brokfree");
+        $pdo=$conn->pdo;
         if($val):
-            $conn=new DBase("brokfree");
-            $pdo=$conn->pdo;
             $s1=new Stmt($pdo);
             $sql="SELECT username from users where email=:email";
             $email=$_SESSION['email'];
