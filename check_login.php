@@ -1,6 +1,16 @@
 <?php
     include "classes/DBase.php";
     include "classes/stmt.php";
+    include "link.php";
+    $str='/brokfree/check_login.php';
+    $val=link_check($str);
+    if($val):
+        ob_start();
+        include "templates/error.html";
+        $out=ob_get_clean();
+        echo $out;
+        exit();
+    endif;
     session_start();
     function check(){
         $val = (isset($_COOKIE['ksi'])) ? true : false ;

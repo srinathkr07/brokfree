@@ -1,4 +1,14 @@
 <?php
+    include "link.php";
+    $str='/brokfree/sendmail.php';
+    $val=link_check($str);
+    if($val):
+        ob_start();
+        include "templates/error.html";
+        $out=ob_get_clean();
+        echo $out;
+        exit();
+    endif;
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
