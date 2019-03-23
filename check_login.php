@@ -1,7 +1,7 @@
 <?php
     include "classes/DBase.php";
     include "classes/stmt.php";
-    include "link.php";
+    require_once "link.php";
     $str='/brokfree/check_login.php';
     $val=link_check($str);
     if($val):

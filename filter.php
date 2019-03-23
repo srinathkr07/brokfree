@@ -1,4 +1,14 @@
 <?php
+    require_once "link.php";
+    $str='/brokfree/filter.php';
+    $val=link_check($str);
+    if($val):
+        ob_start();
+        include "templates/error.html";
+        $out=ob_get_clean();
+        echo $out;
+        exit();
+    endif;
     if(isset($_GET['min']) && isset($_GET['min']))
     {
         $min=(int)$_GET['min'];

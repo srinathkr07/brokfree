@@ -1,6 +1,5 @@
 <?php
     include "check_login.php";
-    include "error.php";
     $val=check();
     if($val):
         $conn=new DBase("brokfree");
