@@ -172,10 +172,10 @@ body {
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <form action="/filter/" method="GET">
+                <form action="search.php" method="GET">
                     <div class="main-filter">
                     <div class="input-group" style='width:300px'>
-                    <input type="text" placeholder="Search for a locality" style='height:34px; width:200px;' list='cities' required autocomplete="off" name='city' value={{location}}>
+                    <input type="text" placeholder="Search for a locality" style='height:34px; width:200px;' list='cities' required autocomplete="off" name='city'>
                         <datalist id='cities'>
                             <option value="Anna Nagar">
                             <option value="Arumbakkam">
@@ -200,8 +200,8 @@ body {
                             </div>
                         </div>
                         <span class="filter-panel-header">Price range</span>
-                        <input type="number" placeholder="Minimum rent" name="min" value="0">
-                        <input type="number" placeholder="Maximum rent" name="max" value="100000">
+                        <input type="number" placeholder="Minimum rent" name="min" value=0>
+                        <input type="number" placeholder="Maximum rent" name="max" value=100000>
                         <span class="filter-panel-header">Apartment Type</span>
                         <label class="proptype">1 BHK
                             <input type="radio" name="radio" value="1">
