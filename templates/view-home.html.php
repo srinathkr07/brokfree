@@ -201,7 +201,7 @@ body {
                         <div style="box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);">
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIYSURBVGhD7dk9axRRFMbxVVQwWIliqoSAiIWCEMFeQUjAiIhdwA8gWPiCiGARfAExvZJoChU/g5XYhAgiRAsFQTFN8BVBUYRE/T+wC0EezSb33rMzsA/8YBjYc87M7LIzdxoB2ddU62zH+yZt1zJb8Qq/m7StfbVKD2bQOogW7duIWmQN7uHvg2i5i1rkPNwBLHUOlc4wfsENv9QChlDJ9OMT3ODOR/ShUtkA9+NezjT02cpkHG7QdlxHJTKCdn4X/6LPHkJHsxnzcAOuhGqoVsdyH26w1biDjuQI3EApVDM0W/AObpgU4V+xW3CD5DCBkOyG/pndEDksYi+K5wHcADnpj1I3n8VyEK5xCYdRJGsxC9e0hOdQz+zRGXINSypyVR7BNSvpIbJmD1yjCLuQLdfgmkS4imx5A9ckwmtkidajXINIA0jOcbjikUaRnCtwxSNdQnIm4YpH0gzJ+d9iWxTNkJybcMUj3UByLsIVj3QByTkGVzzSUSSnF654FC0XZXsd8QSuSYTHyJaTcE0inEC2bMJnuEYlfYB6Z81ZuGYlnUL2rMczuIYlPMU6FMlOfINrnNMX7EDRHMBPuAFyUO39CIlem5W4Ml+hJafQ6Dn+JdxAq/ECWZ/PVxK9M7+MH3DDteM7xlCJ9++6jdED2BzcsM5b6CRsQ+WilUEtQJ/BFLQupdsb0fZtnMYgiqwidtNNNy6Nxh+dWwBr5ffX8gAAAABJRU5ErkJggg==">
                             <p style="display:inline; margin-left:30px; font-size: 20px; text-align: center; ">Water Supply</p>
-                            <p style="display:inline; font-size: 20px"> : <?=$row['water_harvest']?></p>
+                            <p style="display:inline; font-size: 20px"> : <?=$row['water']?></p>
                         </div>
                     </div>
                     <div class="col-md-6">
