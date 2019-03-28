@@ -1,8 +1,8 @@
 <?php
     require_once "link.php";
     $str='/brokfree/filter.php';
-    $val=link_check($str);
-    if($val):
+    $val1=link_check($str);
+    if($val1):
         ob_start();
         include "templates/error.html";
         $out=ob_get_clean();
